@@ -23,7 +23,7 @@ class DmspiderSpider(scrapy.Spider):
             item['IMG'] = product['links'][0]['href']
             item['Price'] = product['price']
             yield item
-        api_url = "https://services.dm.de/websearch/search/pues?type=product&tenant=de_mcr&q=essence&categoryId=&pageSize=24&sort=relevance&cp={}&productQuery=&initialProductQuery=&hiddenFacets="
+        api_url = "https://services.dm.de/websearch/search/pues?type=product&tenant=de_mcr&q=essence&categoryId=&pageSize=48&sort=relevance&cp={}&productQuery=&initialProductQuery=&hiddenFacets="
         page = 1
         if data['serviceProducts'] != []:
             next_url = api_url.format(page + 1)
