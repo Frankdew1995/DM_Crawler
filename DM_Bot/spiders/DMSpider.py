@@ -25,8 +25,8 @@ class DmspiderSpider(scrapy.Spider):
             yield item
         api_url = "https://services.dm.de/websearch/search/pues?type=product&tenant=de_mcr&q=essence&categoryId=&pageSize=48&sort=relevance&cp={}&productQuery=&initialProductQuery=&hiddenFacets="
         # page = 1
-        for i in range(27):
-            next_page = i + 1
+        for i in range(2,27):
+            next_page = i
             next_url = api_url.format(next_page)
             yield scrapy.Request(url = next_url, callback = self.parse)
         # if data['serviceProducts'] != []:
