@@ -29,7 +29,7 @@ class DmspiderSpider(scrapy.Spider):
         #     next_page = i
         #     next_url = api_url.format(next_page)
         #     yield scrapy.Request(url = next_url, callback = self.parse)
-            if len(data['serviceProducts']) == 48 :
+            if data['serviceProducts'] is not None:
                 page = 1
                 next_url = api_url.format(page + 1)
                 yield scrapy.Request(url = next_url, callback = self.parse)
