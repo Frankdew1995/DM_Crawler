@@ -5,7 +5,7 @@ from DM_Bot.items import DmBotItem
 
 
 class DmspiderSpider(scrapy.Spider):
-    name = 'Catrice'
+    name = 'Essence'
     allowed_domains = ['dm.de']
     # headers = {
     #     'Accept': 'application/json, text/plain, */*'
