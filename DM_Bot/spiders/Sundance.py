@@ -39,7 +39,7 @@ class DmspiderSpider(scrapy.Spider):
         #     yield scrapy.Request(url=next_api_url, callback=self.parse)
 
 
-        for i in range(2,8):
+        for i in range(2,4):
             next_page = i
             next_url = api_url.format(next_page)
             yield scrapy.Request(url = next_url, callback = self.parse)
